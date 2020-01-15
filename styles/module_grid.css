@@ -1,0 +1,63 @@
+.mg {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	box-sizing: border-box;
+}
+.mg__cell-12 {
+	width: 100%;
+}
+.mg__cell-11 {
+	width: calc(100% / 12 * 11);
+}
+.mg__cell-10 {
+	width: calc(100% / 12 * 10);
+}
+.mg__cell-9 {
+	width: calc(100% / 12 * 9);
+}
+.mg__cell-8 {
+	width: calc(100% / 12 * 8);
+}
+.mg__cell-7 {
+	width: calc(100% / 12 * 7);
+}
+.mg__cell-6 {
+	width: calc(100% / 12 * 6);
+}
+.mg__cell-5 {
+	width: calc(100% / 12 * 5);
+}
+.mg__cell-4 {
+	width: calc(100% / 12 * 4);
+}
+.mg__cell-3 {
+	width: calc(100% / 12 * 3);
+}
+.mg__cell-2 {
+	width: calc(100% / 12 * 2);
+}
+.mg__cell-1 {
+	width: calc(100% / 12);
+}
+.mg--gutters {
+	margin: 0 -20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.mg--gutters > div {
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.mg--align-c {
+	align-items: center;
+}
