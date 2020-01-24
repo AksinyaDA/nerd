@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: Roboto;
+	font-family: Roboto, Arial, sans-serif;
 }
 .header {
 	margin: 0;
@@ -21,33 +21,62 @@ body {
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 500;
-	font-family: Roboto, sans-serif;
 	color: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.logo__img {
+	display: inline-block;
+}
+.logo:hover {
+	opacity: 0.8;
+}
+.logo:active {
+	opacity: 0.3;
 }
 .menu {
 	display: flex;
 	list-style-type: none;
 	justify-content: center;
 	margin-top: 30px;
+	flex: 1 1 auto;
 
 }
+.menu__item {
+	padding: 0 25px;
+}
 .menu__link {
-	padding-right: 25px;
-	padding-left: 25px;
 	text-decoration: none;
 	color: inherit;
 }
-.menu__link::last-child {
+.menu__link:hover,
+.cart__name:hover {
+	color: #fb565a;
+}
+.menu__link:active,
+.cart__name:active {
+	opacity: 0.3;
+}
+.menu__link--isActive,
+.cart__name--isActive {
+	position: relative;
+}
+.menu__link--isActive::after,
+.cart__name--isActive::after {
+	content: '';
+	position: absolute;
+	bottom: -13px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fb565a;
+}
+.menu__link:last-child {
 	padding-right: 0;
 } 
 .cart {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 12px;
+	margin-left: 40px;
 }
 .cart__name {
 	color: inherit;
@@ -63,7 +92,7 @@ body {
 	width: 15px;
 	background-image: url("../svg/cart-icon.svg");
 }
-.slaider {
+.slider {
 	background-image: url(../img/slide1.png);
 	background-repeat: no-repeat;
     background-position: 428px 13px;
@@ -71,7 +100,7 @@ body {
     box-sizing: border-box;
     border: 1px solid transparent;
 }
-.slaider__caption {
+.slider__caption {
 	font-family: Roboto;
 	font-weight: 500;
 	font-size: 55px;
@@ -80,8 +109,7 @@ body {
 	line-height: 1.0;
 	margin-bottom: 0;
 }
-.slaider__text {
-	font-family: Roboto;
+.slider__text {
 	font-weight: 400;
 	font-size: 16px;
 	color: #283136;
@@ -90,7 +118,6 @@ body {
 } 
 .button {
 	display: inline-block;
-	font-family: Roboto;
 	font-weight: 500;
 	font-size: 16px;
 	color: #fff;
@@ -99,6 +126,9 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	border-radius: 2px;
+}
+.button:hover {
+	background-color: #e74246;
 }
 .button--good {
 	background-color: #00ca74;
@@ -109,13 +139,11 @@ body {
 .advantages {
 	display: flex;
 	border-bottom: 2px solid #eeeeee;
-	padding-bottom: 82px;
-	margin-bottom: 82px;
+	padding-bottom: 80px;
+	margin-bottom: 73px;
 }
-.advantages__pic {
-	height: 146px;
-	width: 300px;
-
+.advantages__item {
+	width: calc(100%/3);
 }
 .advantages__pic--alert {
 	background-color: #fb565a;
@@ -130,7 +158,6 @@ body {
 	background-image: url(../svg/);
 }
 .advantages__caption {
-	font-family: Roboto;
 	font-weight: 700;
 	font-size: 24px;
 	color: #000;
@@ -138,50 +165,47 @@ body {
 	text-transform: uppercase;
 }
 .advantages__text {
-	font-family: Roboto;
 	font-weight: 400;
 	font-size: 16px;
 	color: #283136;
 	line-height: 1.5;
+	margin-bottom: 28px;
 }
 .studio {
 	border-bottom: 2px solid #eeeeee;
 	padding-bottom: 78px;
+	display: flex;
 }
 .studio__caption {
-	font-family: Roboto;
 	font-weight: 500;
 	font-size: 45px;
 	color: #000;
 	line-height: 1.0;
 }
-.studio_text {
-	font-family: Roboto;
+.studio__text {
 	font-weight: 400;
 	font-size: 16px;
 	color: #283136;
 	line-height: 1.5;
 }
 .studio__list-caption {
-	font-family: Roboto;
 	font-weight: 700;
 	font-size: 16px;
 	color: #000;
 	line-height: 1.5;
 	text-transform: uppercase;
 }
-.studio_list {
+.studio__list {
 	list-style-type: none;
 }
-.studio_list-item {
-	font-family: Roboto;
+.studio__list-item {
 	font-weight: 400;
 	font-size: 16px;
 	color: #283136;
 	line-height: 1.5;
 	position: relative;
 }
-.studio_list-item::before {
+.studio__list-item::before {
 	content: "";
 	position: absolute;
 	width: 25px;
@@ -223,23 +247,14 @@ body {
 	margin-bottom: 80px;
 }
 .custumer__link {
-	background-image: url(../img/sprait-logo.png);
-	background-repeat: no-repeat;
 	display: inline-block;
-	height: 90px;
-	width: 209px;
+	opacity: 0.2;
 }
-.custumer__link--html {
-	background-position: 0 -16px;
+.custumer__link:hover {
+	opacity: 1;
 }
-.custumer__link--borodin {
-	background-position: -253px -16px;
-}
-.custumer__link--pink {
-	background-position: 0 -16px;
-}
-.custumer__link--mishka {
-	background-position: 0 -16px;
+.custumer__link:active {
+	opacity: 0.1;
 }
 /* map*/
 .map {
