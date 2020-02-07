@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nerd</title>
-	<link rel="stylesheet" href="styles/font.css">
+	<!--<link rel="stylesheet" href="styles/font.css">-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
 		<div class="container">
 			<div class="top-menu">
 				<a href="#" class="logo">
-					<img src="svg/nerds-logo.svg" alt="Logo" class="logo__img">
+					<img src="svg/nerds-logo.svg" alt="Logo">
 				</a>
 				<ul class="menu">
 					<li class="menu__item">
@@ -27,9 +28,7 @@
 						<a class="menu__link" href="#">Контакты</a>
 					</li>
 				</ul>
-				<div class="cart">
-					<a href="#" class="cart__name">Корзина</a>
-				</div>
+				<a href="#" class="cart">Корзина</a>
 			</div>
 			<div class="slider">
 				<h2 class="slider__caption">
@@ -108,18 +107,26 @@
 	<!-- customer-->	
 	<section class="container">
 		<div class="customer">
-			<a href="#" class="custumer__link" target="_blank">
-				<img class="customer__image" src="img/html.png" alt="html">
-			</a>
-			<a href="#" class="custumer__link" target="_blank">
-				<img class="customer__image" src="img/borodinski.png" alt="borodin">
-			</a>
-			<a href="#" class="custumer__link" target="_blank">
-				<img class="customer__image" src="img/pink.png" alt="pink">
-			</a>
-			<a href="#" class="custumer__link" target="_blank">
-				<img class="customer__image" src="img/mishka.png" alt="mishka">
-			</a>
+			<div class="customer__item">
+				<a href="#" class="custumer__link" target="_blank">
+					<img class="customer__image" src="img/html.png" alt="html">
+				</a>
+			</div>
+			<div class="customer__item">
+				<a href="#" class="custumer__link" target="_blank">
+					<img class="customer__image" src="img/borodinski.png" alt="borodin">
+				</a>
+			</div>
+			<div class="customer__item">
+				<a href="#" class="custumer__link" target="_blank">
+					<img class="customer__image" src="img/pink.png" alt="pink">
+				</a>
+			</div>
+			<div class="customer__item">
+				<a href="#" class="custumer__link" target="_blank">
+					<img class="customer__image" src="img/mishka.png" alt="mishka">
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -140,9 +147,21 @@
 <div class="container">					
 	<footer class="footer">
 		<ul class="social">
-			<li class="social__item"><a href="#" class="social__link" target="_blank"><span class="social__text social__text--vk "></span></a></li>
-			<li class="social__item" target="_blank"><a href="#" class="social__link social__link--fb"></a></li>
-			<li class="social__item" target="_blank"><a href="#" class="social__link social__link--ig"></a></li>
+			<li class="social__item">
+				<a href="#" class="social__link" target="_blank">
+					<span class="social__text social__text--vk "></span>
+				</a>
+			</li>
+			<li class="social__item" >
+				<a href="#" class="social__link" target="_blank">
+					<span class="social__text social__text--fb"></span>
+				</a>
+			</li>
+			<li class="social__item">
+				<a href="#" class="social__link" target="_blank">
+					<span class="social__text social__text--ig"></span>
+				</a>
+			</li>
 		</ul>
 		<div class="footer__info">
 			<h4 class="footer__caption">Давайте дружить, это выгодно!</h4>
